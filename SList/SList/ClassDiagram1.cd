@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CustomListInterface&lt;T, InputIterator, InputConst_Iterator&gt;" Collapsed="true">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAACECABBAgABEAIEIAAASEAAAAAIAAQEAAgAAAAA=</HashCode>
+      <FileName>CustomListInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sla::const_slistArrayIterator&lt;T&gt;" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACgAIAQAAAAwAAAAAAAAIAAAAgAAABAAA=</HashCode>
+      <FileName>SListArray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sla::slistArrayIterator&lt;T&gt;" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAAAAAAAQAAAAwAAAAAAAAIAAAAgAAABAAA=</HashCode>
+      <FileName>SListArray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sla::SListArray&lt;T, A&gt;" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAACEDgFBAgABGCIEIAAAQEAAAAAIAAREgAgBAAgA=</HashCode>
+      <FileName>SListArray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sl::const_slistIterator&lt;T&gt;" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACgAAAQAwAAyAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>SLlist.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sl::slistIterator&lt;T&gt;" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAQAwAAwAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>SLlist.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sl::Slist&lt;T, A&gt;" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMgAAiEDAFBAhABECJEIAAASEAAAAAIAAREgAgAAAAA=</HashCode>
+      <FileName>SLlist.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="sla::Node&lt;T&gt;" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACBAAAKAIAgAAAAAACAAIAACAAMAAAA=</HashCode>
+      <FileName>SListArray.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="sl::Node&lt;T&gt;" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACBAAAIAAAAAAAAAACAAIAACAAMAAAA=</HashCode>
+      <FileName>SLlist.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CustomListInterface&lt;T, InputIterator, InputConst_Iterator&gt;" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAACECABBAgABEAIEIAAASEAAAAAIAAQEAAgAAAAA=</HashCode>
+      <FileName>CustomListInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="fsl::const_fixedSListIterator&lt;T&gt;" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Typedef Name="fsl::const_fixedSListIterator&lt;T&gt;::value_type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::const_fixedSListIterator&lt;T&gt;::difference_type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::const_fixedSListIterator&lt;T&gt;::iterator_category" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACgAAAQAAAAwAAAAAAAAAAAAAgAAgBAAg=</HashCode>
+      <FileName>FixedSList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="fsl::fixedSListIterator&lt;T&gt;" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAQAAAAwAAAAAAAAAAAAAgAAgBAAE=</HashCode>
+      <FileName>FixedSList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="fsl::FixedSList&lt;T, N, A&gt;">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::const_iterator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::allocator_type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::iterator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::size_type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::_Myt" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::value_type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::const_reference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::reference" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::const_pointer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::difference_type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+      <Typedef Name="fsl::FixedSList&lt;T, N, A&gt;::pointer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FixedSList.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEAAACEDgFBIgABECIEIAAASEAEAAAIAAREAAkAAAgA=</HashCode>
+      <FileName>FixedSList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sla::const_slistArrayIterator&lt;T&gt;" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACgAIAQAAAAwAAAAAAAAIAAAAgAAABAAA=</HashCode>
+      <FileName>SListArray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sla::slistArrayIterator&lt;T&gt;" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAAAAAAAQAAAAwAAAAAAAAIAAAAgAAABAAA=</HashCode>
+      <FileName>SListArray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sla::SListArray&lt;T, A&gt;" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQCEDgFBAgABGCIEIAAASEAAAACIAAREgAoBAAgA=</HashCode>
+      <FileName>SListArray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sl::const_slistIterator&lt;T&gt;" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACgAAAQAwAAyAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>SLlist.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sl::slistIterator&lt;T&gt;" Collapsed="true">
+    <Position X="11" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAQAwAAwAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>SLlist.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sl::Slist&lt;T, A&gt;" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMgAAiEDAFBAhABECJEIAAASEAAAAAIAAREgAgAAAAA=</HashCode>
+      <FileName>SLlist.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Node&lt;T&gt;" Collapsed="true">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACBAAAIAAAAAAAAAACAAIAACAAMAAAA=</HashCode>
+      <FileName>Node.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="sl::Node&lt;T&gt;" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACBAAAIAAAAAAAAAACAAIAACAAMAAAA=</HashCode>
+      <FileName>SLlist.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

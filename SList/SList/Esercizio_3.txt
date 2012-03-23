@@ -1,0 +1,32 @@
+keeping STL list interface,
+
+implement a Single Linked List class Template:
+
+template<typename T>
+class SList
+{
+    //...
+};
+
+implement then a cache friendly version that uses a std::vector as node storage
+
+template<typename T>
+class SListArray
+{
+public:
+    //...
+private:
+    //...
+    std::vector<Node<T> > m_data;
+};
+
+and a turbo performing version that uses a fixed array of size N
+template<typename T, unsigned int N>
+class FixedSList
+{
+public:
+    //...
+private:
+    //...
+    Node<T> m_data[N];
+}
