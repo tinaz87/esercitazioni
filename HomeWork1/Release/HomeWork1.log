@@ -1,0 +1,6 @@
+﻿  main.cpp
+c:\users\probook\desktop\mattia doc\dropbox\master_privato\c++\homework\1\watercalc\homework1\Pool.h(54): warning C4018: '<': errata corrispondenza tra signed e unsigned
+c:\users\probook\desktop\mattia doc\dropbox\master_privato\c++\homework\1\watercalc\homework1\Pool.h(179): warning C4244: 'argomento': conversione da 'float' a 'const int'. Possibile perdita di dati.
+  Generazione codice in corso...
+  Generazione codice terminata
+  HomeWork1.vcxproj -> C:\Users\PROBOOK\Desktop\Mattia Doc\Dropbox\MASTER_PRIVATO\C++\HomeWork\1\WaterCalc\Release\HomeWork1.exe
