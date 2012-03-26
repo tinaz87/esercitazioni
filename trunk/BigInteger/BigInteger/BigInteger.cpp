@@ -40,42 +40,13 @@ bigInt::bigInt(const std::string i_string){
 
 }
 
-/*
-
-bigInt pow(const bigInt& i_base,const int& i_exponent){
-
-	
-
-	if (i_exponent == 0)
-	{
-		
-		return 1;
-	}
-	
-	if (i_exponent == 1)
-	{
-
-		return i_base;
-	}
-
-	bigInt power = i_base;
-	for(int i = 0;i<i_exponent-1;++i){
-
-		power *=i_base; 
-	}
-
-	if ( i_base.negative && i_exponent%2==0)
-	{
-		power.negative = false;
-	}
-
-	return power;
-
-}
-*/
-
-
 bigInt pow(const bigInt& i_base,const bigInt& i_exponent){
+
+	if (i_exponent.negative)
+	{
+
+		return 0;
+	}
 
 	if (i_exponent == 0)
 	{
@@ -97,10 +68,10 @@ bigInt pow(const bigInt& i_base,const bigInt& i_exponent){
 		power *=i_base; 
 	}
 
-	if ( i_base.negative && i_exponent%2==0)
+	/*if ( i_base.negative && i_exponent%2==0)
 	{
 		power.negative = false;
-	}
+	}*/
 
 	return power;
 
@@ -373,7 +344,7 @@ void bigInt::doSum(const bigInt* max,const bigInt* min){
 				}
 			}else{
 
-				if( resto ) //1 true 0 false
+				if( resto ) 
 					this->base.push_back(resto);
 			}
 
@@ -441,7 +412,7 @@ void bigInt::doProduct(const bigInt* max,const bigInt* min){
 
 }
 
-bool bigInt::doOperation(void (bigInt::*i_op)(const bigInt*,const bigInt*),const bigInt i_value){
+bool bigInt::doOperation(void (bigInt::*i_op)(const bigInt*,const bigInt*),const bigInt& i_value){
 
 
 	const bigInt* max ;
@@ -471,10 +442,6 @@ bool bigInt::doOperation(void (bigInt::*i_op)(const bigInt*,const bigInt*),const
 
 bigInt bigInt::doDivision(const bigInt& divisore,bigInt& o_remainder,const bool return_quotient) const{
 
-	//bigInt o_remainder;
-
-	//o_remainder.base.pop_back();
-	
 	bigInt quotient;
 
 	quotient.base.pop_back();
@@ -545,9 +512,9 @@ bigInt bigInt::doDivision(const bigInt& divisore,bigInt& o_remainder,const bool 
 
 		if (o_remainder < divisore) // ok first digit of quotient is 1
 		{
-			if (o_remainder<0)//<=
+			if (o_remainder<0)
 			{
-				o_remainder = dividend;//=0
+				o_remainder = dividend;
 				quotient.base.push_front(0);
 			}
 			else{
@@ -682,8 +649,6 @@ bigInt bigInt::doDivision(const bigInt& divisore,bigInt& o_remainder,const bool 
 }
 
  bool bigInt::operator!=(const bigInt& r_value) const{
-
-
 
 	return !(*this==r_value);
 }
@@ -993,7 +958,7 @@ bigInt& bigInt::operator^=(const bigInt& i_value){
 	void (bigInt::*operation)(const bigInt*,const bigInt*);
 
 
-	switch ( ( i_value1.negative && this->negative ) | ( !i_value1.negative && !this->negative ) )//switch ( ( i_value1.negative && this->negative ) | ( !i_value1.negative && !this->negative ) )
+	switch ( ( i_value1.negative && this->negative ) | ( !i_value1.negative && !this->negative ) )
 	{
 		case true:
 
@@ -1008,7 +973,7 @@ bigInt& bigInt::operator^=(const bigInt& i_value){
 			break;
 	}
 
-	this->negative = doOperation(operation,i_value1) ; // ritorna il segno del massimo
+	this->negative = doOperation(operation,i_value1) ; 
 
 	return *this;
 }
@@ -1107,7 +1072,7 @@ const UINT32 bigInt::Appoggio_Diff(const UINT32 min,const UINT32 max,const UINT3
 
 
 	UINT64 diff_long = ( static_cast<UINT64>(max) + 
-		static_cast<UINT64>(prestito) * (static_cast<UINT64>(uint_max) + 1) ) - 
+		static_cast<UINT64>(prestito) * (uint_max + 1) ) - 
 		static_cast<UINT64>(min);
 
 	diff = static_cast<UINT32>(diff_long);
@@ -1180,9 +1145,39 @@ int bigInt::MinHelper(const bigInt& r_value) const{
 
 		}
 	}
+}
 
 
+/*
 
+bigInt pow(const bigInt& i_base,const int& i_exponent){
 
+	
+
+	if (i_exponent == 0)
+	{
+		
+		return 1;
+	}
+	
+	if (i_exponent == 1)
+	{
+
+		return i_base;
+	}
+
+	bigInt power = i_base;
+	for(int i = 0;i<i_exponent-1;++i){
+
+		power *=i_base; 
+	}
+
+	if ( i_base.negative && i_exponent%2==0)
+	{
+		power.negative = false;
+	}
+
+	return power;
 
 }
+*/

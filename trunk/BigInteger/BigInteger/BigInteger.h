@@ -6,7 +6,7 @@
 
 
 
-#define uint_max std::numeric_limits<UINT32>::max()
+#define uint_max static_cast<UINT64>(std::numeric_limits<UINT32>::max())
 
 #define BOOST_FACTOR 10
 
@@ -19,7 +19,6 @@ public:
 
 	bigInt ():negative(false),base(1,0){
 
-		//base.push_back(0);
 	}
 
 
@@ -35,17 +34,17 @@ public:
 
 		UINT64 val = i_num;
 
-		UINT64 reminder= val % (static_cast<UINT64>(uint_max) + 1);
+		UINT64 reminder= val % (uint_max + 1);
 
-		val/=(static_cast<UINT64>(uint_max) + 1);
+		val/=(uint_max + 1);
 
 		base.push_back(static_cast<UINT32>(reminder));
 
 		while (val > 0)
 		{
-			reminder = val % (static_cast<UINT64>(uint_max) + 1);
+			reminder = val % (uint_max + 1);
 			
-			val/= (static_cast<UINT64>(uint_max) + 1);
+			val/= (uint_max + 1);
 			
 			base.push_back(static_cast<UINT32>(reminder));
 		}
@@ -58,7 +57,7 @@ public:
 
 	friend bigInt abs(const bigInt&);
 
-	//friend bigInt pow(const bigInt&,const int& );
+	
 
 	friend bigInt pow(const bigInt& ,const bigInt& );
 	
@@ -155,7 +154,7 @@ private :
 
 	int MinHelper(const bigInt& r_value) const; // 1 true, 0 false, 2 equal
 
-	bool doOperation(void (bigInt::*i_op)(const bigInt*,const bigInt*),const bigInt i_value);
+	bool doOperation(void (bigInt::*i_op)(const bigInt*,const bigInt*),const bigInt& i_value);
 
 	void doSum(const bigInt* max,const bigInt* min);
 
