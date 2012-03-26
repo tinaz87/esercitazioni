@@ -1,5 +1,6 @@
+
 #pragma  once
-//#include "CustomListInterface.h"
+
 #include <deque>
 #include <list>
 #include <algorithm>
@@ -61,7 +62,7 @@ namespace slst{
 
 
 	template<typename T,typename A = std::allocator< Node<T> > >
-	class Slist//: public CustomListInterface<T,slistIterator<T>,const_slistIterator<T> >
+	class Slist
 	{
 
 
@@ -75,8 +76,6 @@ namespace slst{
 		A alloc;
 
 		void init(){
-
-			//Node<T> p;
 
 			list = alloc.allocate(1);
 
@@ -741,6 +740,8 @@ namespace slst{
 
 		}
 
+
+		// i use the alghoritm's stable_sort on a deque that i fill with Slist data
 		void sort(){
 
 			std::deque<value_type> toSort;
@@ -764,6 +765,8 @@ namespace slst{
 
 		}
 
+
+		// i use the std::list merge to implement the slist merge
 		void merge(Slist& other){
 
 			std::list<T,A> list_other(other.begin(),other.end());

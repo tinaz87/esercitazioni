@@ -1,3 +1,10 @@
+
+/************************************************************************/
+/* Nelle diverse strutture per implementare il SORT e il MERGE mi sono  */
+/* appoggiato a quelli delle Standard Library							*/
+/************************************************************************/
+
+
 #include "SListArray.h"
 #include "SLlist.h"
 #include "FixedSList.h"
@@ -100,12 +107,12 @@ namespace Test{
 		++it_begin2;
 		++it_begin2;
 
-		std::cout<<"\nLista_1 Erase elements from "<<*it_begin<<" to end() "<<std::endl;//*it_begin2<<std::endl;
+		std::cout<<"\nLista_1 Erase elements from "<<*it_begin<<" to end() "<<std::endl;
 		list_1.erase(it_begin,list_1.end());
 		
 		print<Slist<int> >(list_1);
 		
-		std::cout<<"\n Swap Lista_2 <-> Lista_1 "<<std::endl;//*it_begin2<<std::endl;
+		std::cout<<"\n Swap Lista_2 <-> Lista_1 "<<std::endl;
 		swap(list_2,list_1);
 		std::cout<<"\n Swap Lista_1"<<std::endl;
 		print<Slist<int> >(list_1);
@@ -297,7 +304,7 @@ namespace Test{
 		print<FixedSList<int,DIM2> >(flist2);
 		
 		auto delete_it =flist2.begin();
-		//auto delete_it2 = flist2.end();
+
 
 		++delete_it;
 		++delete_it;
@@ -342,16 +349,11 @@ namespace Test{
 
 int main(){
 
-
-	slst::Slist<int> c1(10,1);
-	slst::Slist<int> c2 =c1;
-
-
-	/*Test::FixedSListTest();
+	Test::FixedSListTest();
 	
 	Test::SlistTest();
 	
-	Test::SListArrayTest();*/
+	Test::SListArrayTest();
 
 	system("PAUSE");
 
