@@ -118,7 +118,7 @@ int main(int argc, char** argv){
 	
 	
 
-	//ifstream infile("input10.txt",std::ios::in);
+	//ifstream infile("input12.txt",std::ios::in);
 
 	int rows=1;
 	int columns=1;

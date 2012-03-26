@@ -27,11 +27,14 @@ private:
 
 	PersonalMatrix PrepareSupportsMatrix(const PersonalMatrix& originalMatrix);
 
-	float touchNeighborsPoolAndFindMin(std::vector<pair<int,int>>& vector_touch,const PersonalMatrix& originalMatrix,PersonalMatrix& node_visited_matrix,int i,int j,float min);
+	/*
+		isHis mi dice se il minimo che hotrovato appartiene all' intorno della cella considerata (OriginalMatrix(i,j))
+	*/
+	float touchNeighborsPoolAndFindMin(std::vector<pair<int,int>>& vector_touch,const PersonalMatrix& originalMatrix,PersonalMatrix& node_visited_matrix,int i,int j,float min,bool& isHis);
 
-	void fixPool(const PersonalMatrix& originalMatrix);
+	//void fixPool(const PersonalMatrix& originalMatrix);
 
-	bool checkIAlone(int r,int c,const PersonalMatrix& originalMatrix);
+	//bool checkIAlone(int r,int c,const PersonalMatrix& originalMatrix);
 
 	bool FindWall(vector<pair<int,int>>& i_vect,const PersonalMatrix& originalMatrix,const int min );
 
@@ -45,10 +48,15 @@ private:
 
 };
 
+
+/*
+Il vettore contiene una serie di coppie che rappresentano il percorso dell'acqua, il minimo è la cella piu piu bassa che non puo contenere acqua 
+trovata lungo il percorso.
+*/
 bool Pool::FindWall(vector<pair<int,int>>& i_vect,const PersonalMatrix& originalMatrix,const int min ){
 
 vector<pair<int,int>> temp3;
-//temp3.reserve(2);
+
 bool isThereWall=false;
 
 for (int k=0;k<i_vect.size();++k) // non mi serve guardare il primo o l'ultimo
@@ -126,17 +134,32 @@ for (int k=0;k<i_vect.size();++k) // non mi serve guardare il primo o l'ultimo
 		temp3.clear();
 	}
 
-//cout<<"POOL WALL\n"<<endl;
+//std::cout<<"WALL \n\n"<<std::endl;
 //P_pool.printMatrix();
-//cout<<"\n-------------------------------------------------------"<<endl;
 
+//std::cout<<"\n\n"<<std::endl;
 return isThereWall;
 
 }
 
 
 
+/************************************************************************/
+/*	
+	ORIGINAL MATRIX
+	1 2 3 44 5 6
+	2 22 2 22 0 234
+	0 0 0 2 33 32
+	0 2 33 4 4 55
 
+
+	SUPPORT MATRIX
+	0	0	0	0	0	0
+	0	0	1	0	5	0
+	0	0	0	0	0	0
+	0	0	0	0	0	0
+																		*/
+/************************************************************************/
 PersonalMatrix Pool::FindPool(const PersonalMatrix& originalMatrix ){
 
 	
@@ -287,9 +310,26 @@ PersonalMatrix Pool::FindPool(const PersonalMatrix& originalMatrix ){
 					node_visited_vector.push_back(make_pair(i,j));
 					node_visited(i,j)=1;
 
-					min = touchNeighborsPoolAndFindMin(node_touched,originalMatrix,node_visited,i,j,min);
+					bool isHis=false;
+					min = touchNeighborsPoolAndFindMin(node_touched,originalMatrix,node_visited,i,j,min,isHis);
+
+					if (originalMatrix(i,j) > min && isHis)
+					{
+						node_touched.clear();
+						node_visited_vector.clear();
+						node_visited.Reset();
+
+						min=MIN_VALUE;
+						P_pool(i,j)=0;
+
+						i=1;
+						j=1;
+
+					}
 
 				}
+
+				
 
 			}
 
@@ -304,6 +344,25 @@ PersonalMatrix Pool::FindPool(const PersonalMatrix& originalMatrix ){
 
 /*****************
 	Prepara le matrici colonna e riga di supporto per trovare poi le celle ad essere candidate ad essere contenitori d'acqua. 
+
+	ROW SUPPORT MATRIX
+	0	0	0	0	0	0
+	0	0	20	0	22	0
+	0	0	0	0	0	0
+	0	0	0	0	0	0
+
+	COL SUPPORT MATRIX
+	0	0	0	0	0	0
+	0	0	1	11	5	0
+	0	2	3	0	0	0
+	0	0	0	0	0	0
+
+	SUPPORT MATRIX
+	0	0	0	0	0	0
+	0	0	1	0	5	0
+	0	0	0	0	0	0
+	0	0	0	0	0	0
+
 *********************/
 PersonalMatrix Pool::PrepareSupportsMatrix(const PersonalMatrix& originalMatrix){
 
@@ -337,7 +396,7 @@ PersonalMatrix Pool::PrepareSupportsMatrix(const PersonalMatrix& originalMatrix)
 		}
 	}
 	
-	cout<<"\n\n"<<endl;
+	//cout<<"\n\n"<<endl;
 	//P_water.printMatrix();
 	return P_water;
 
@@ -347,6 +406,7 @@ PersonalMatrix Pool::PrepareSupportsMatrix(const PersonalMatrix& originalMatrix)
 /*****************
 	Verifica se sono una singola cella e nel caso ritorna true e calcola m_3_water
 *********************/
+/*
 bool Pool::checkIAlone(int r,int c,const PersonalMatrix& originalMatrix){
 
 	bool valb =   ( P_pool(r,c)>0 && ( P_pool(r-1,c)==0 && P_pool(r,c-1)==0 && P_pool(r,c+1)==0 && P_pool(r+1,c)==0) ) ;
@@ -387,13 +447,14 @@ bool Pool::checkIAlone(int r,int c,const PersonalMatrix& originalMatrix){
 
 	return valb;
 
-}
+}*/
 
 /*****************
 	Trova il minimo tra le celle!=0 attorno alla cella presa in considerazione.
 	Mette quindi le celle!=0 nel vettore delle celle toccate.
 *********************/
-float Pool::touchNeighborsPoolAndFindMin(std::vector<pair<int,int>>& vector_touch,const PersonalMatrix& originalMatrix,PersonalMatrix& node_visited_matrix,int i,int j,float min){
+
+float Pool::touchNeighborsPoolAndFindMin(std::vector<pair<int,int>>& vector_touch,const PersonalMatrix& originalMatrix,PersonalMatrix& node_visited_matrix,int i,int j,float min,bool& isHis){
 
 	for (int r=-1 ; r<=1;++r)
 	{
@@ -410,8 +471,11 @@ float Pool::touchNeighborsPoolAndFindMin(std::vector<pair<int,int>>& vector_touc
 
 				float v3=originalMatrix(i,j);
 
-				if( v2 < min )
+				if( v2 < min ){
 					min=v2;
+					isHis = true;
+
+				}
 
 
 			}else{
