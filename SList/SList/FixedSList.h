@@ -1,7 +1,9 @@
+
+
 #pragma once
 #include <vector>
 #include <cassert>
-#include "CustomListInterface.h"
+
 
 
 namespace fsl{	
@@ -56,7 +58,7 @@ namespace fsl{
 
 	
 	template< typename T, unsigned int N , typename A = std::allocator<Node<T> >>
-	class FixedSList//:public CustomListInterface<T,fixedSListIterator<T>,const_fixedSListIterator<T> >
+	class FixedSList
 	{
 
 	public:
@@ -404,8 +406,6 @@ namespace fsl{
 					m_data[tail].setNext(fsl_size);
 
 					m_data[fsl_size].setValue(i_value);
-				
-					//m_data[fsl_size].setMyPosition(fsl_size);
 
 					tail = fsl_size;
 
@@ -415,8 +415,6 @@ namespace fsl{
 					int next_position =  m_data[tail].getNext();
 
 					m_data[ next_position ].setValue(i_value);
-
-					//m_data[ next_position ].setMyPosition(next_position );
 
 					m_data[ next_position ].setNext( m_data[ m_data[tail].getNext() ].getNext() );
 
@@ -444,7 +442,6 @@ namespace fsl{
 
 					m_data[fsl_size].setValue(i_value);
 
-					//m_data[fsl_size].setMyPosition(fsl_size);
 
 					m_data[fsl_size].setNext(head);
 
@@ -546,8 +543,6 @@ namespace fsl{
 
 						m_data[precedent].setNext(fsl_size);
 
-						//m_data[fsl_size].setMyPosition(fsl_size);
-
 						m_data[fsl_size].setValue(i_value);
 
 					}
@@ -561,7 +556,6 @@ namespace fsl{
 
 						m_data[tail_next_position].setValue(i_value);
 
-						//m_data[tail_next_position].setMyPosition(tail_next_position);
 					}
 
 					incrementListSize();

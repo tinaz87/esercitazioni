@@ -21,9 +21,6 @@
     <ClInclude Include="SListArray.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
-    <ClInclude Include="CustomListInterface.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
     <ClInclude Include="FixedSList.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>

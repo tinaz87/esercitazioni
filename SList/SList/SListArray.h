@@ -1,7 +1,12 @@
 #pragma once
 #include <vector>
-//#include "CustomListInterface.h"
 
+/*
+SListArray è implementata come una lista dove l'ultmo l'inde next della coda punta alla prima cella non utilizzata(proveniente da una cancellazione), ogni volta che
+avviene una remove o erase viene aggiornato l'indice next della coda della lista.
+
+Quando si supera una determinata soglia dovuta al rapporto tra celle utilizzate e non il vector viene ricostruito senza gli elementi cancellati della lista.  
+*/
 namespace sla{	
 
 	template<typename T>
@@ -34,16 +39,6 @@ namespace sla{
 			return next;
 		}
 
-		//int getMyPosition() const{
-
-		//	return position;
-
-		//}
-		//void setMyPosition(int my_pos){
-
-		//position = my_pos;
-		//}
-
 		void setNext(int i_next){
 
 			next = i_next;
@@ -58,13 +53,12 @@ namespace sla{
 
 		T value;
 		int next;
-		//int position;
 
 	};
 
 
 	template<typename T,typename A = std::allocator< Node<T> > >
-	class SListArray//: public CustomListInterface<T,slistArrayIterator<T>,const_slistArrayIterator<T> >
+	class SListArray
 	{
 
 	public:
@@ -438,7 +432,7 @@ namespace sla{
 
 			if (sla_size == 0)
 			{
-				//next->setMyPosition(0);
+				
 				m_data.push_back(*next);
 
 				head = tail = 0;		
@@ -447,7 +441,7 @@ namespace sla{
 
 				if( m_data.at(tail).getNext() == -1 ){
 
-					//next->setMyPosition(m_data.size());
+					
 
 					m_data.at(tail).setNext(m_data.size());
 
@@ -463,7 +457,7 @@ namespace sla{
 				}
 				else{
 
-					//next->setMyPosition(m_data.at(tail).getNext());
+					
 					int next_position = m_data.at(tail).getNext();
 
 					next->setNext( m_data.at( next_position ).getNext()  );
@@ -492,7 +486,7 @@ namespace sla{
 
 			if (sla_size == 0)
 			{
-				//new_head->setMyPosition(0);
+				
 
 				m_data.push_back(*new_head);
 
@@ -502,7 +496,7 @@ namespace sla{
 
 				if( m_data.at(tail).getNext() == -1){
 
-					//new_head->setMyPosition(m_data.size());
+					
 
 					new_head->setNext( head);
 
@@ -513,7 +507,7 @@ namespace sla{
 				}
 				else{
 
-					//new_head->setMyPosition(m_data.at(tail).getNext());
+					
 
 					new_head->setNext( head);
 
@@ -612,7 +606,7 @@ namespace sla{
 
 					if( m_data.at(tail).getNext() == -1){
 
-						//ins->setMyPosition(m_data.size());
+						
 
 						m_data.push_back(*ins);
 
@@ -627,7 +621,7 @@ namespace sla{
 
 						m_data.at(precedent).setNext(tail_next_position);
 
-						//ins->setMyPosition(tail_next_position);					
+										
 
 						m_data.at( tail_next_position ) = *ins;
 
@@ -898,6 +892,8 @@ namespace sla{
 			--sla_size;
 
 		}
+
+
 
 		void ControlThreshold(){
 

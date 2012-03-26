@@ -60,7 +60,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CustomListInterface.h" />
     <ClInclude Include="FixedSList.h" />
     <ClInclude Include="SListArray.h" />
     <ClInclude Include="SLlist.h" />
