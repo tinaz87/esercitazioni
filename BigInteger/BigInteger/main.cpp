@@ -1,4 +1,4 @@
-// bigInteger.cpp : definisce il punto di ingresso dell'applicazione console.
+// 
 //
 
 #include <stdio.h>
@@ -8,6 +8,8 @@
 #include <intsafe.h>
 
 namespace Big{
+
+	// Il test utilizzato è preso da quello fatto da Devis
 
 	bigInt Fibonacci(UINT32 n)
 	{
