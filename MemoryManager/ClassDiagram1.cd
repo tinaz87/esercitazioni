@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PolloA&lt;T&gt;" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyMain.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatateAllocTest" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABAAAIAAAAAAgAAAAAAAAAAAAAAAIAAEAAAEAAAA=</HashCode>
+      <FileName>MyMain.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllocatorInterfaces&lt;Chunk&gt;" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAABAAAAAAAAAAAAAAAAAgAAAAAQAAAAA=</HashCode>
+      <FileName>AllocatorInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stack_Allocator&lt;Chunk&gt;" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAEgAARAAAAAAEAAAQAgAgAAAIAAAAABAAAA=</HashCode>
+      <FileName>AllocatorInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fixed_Allocator&lt;Chunk&gt;" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAEAgAAARAAAIAAEoAAQAAAAIAAIAAgECACFIA=</HashCode>
+      <FileName>AllocatorInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CategoryInterfaces&lt;ObjectAllocator&gt;" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAFAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>CategoryInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingletonAllocator&lt;ObjAllocator&gt;" Collapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAQAAgAAAAAAA=</HashCode>
+      <FileName>CategoryInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stack_Category&lt;ObjectAllocator&gt;" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAFAAAAABAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>CategoryInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmallObject_Category&lt;ObjectAllocator&gt;" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAFAIAAABABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CategoryInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChunkInterfaces" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAABAAAAAAAAAAAAAIAAAAAAAAABAAAAA=</HashCode>
+      <FileName>ChunkInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Simple_Chunk" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAIAEAAgABBAAAIAAAAAAAAAAAAAAAAACABBAAAA=</HashCode>
+      <FileName>ChunkInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Default_Chunk" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAgAAEAAAABBAAAIAAQAAAAgAAIAAAIAACABAABAA=</HashCode>
+      <FileName>ChunkInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MemoryManagerObj" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAQQAAAAAAAAAAECAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>MemoryManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MemoryManagerSingleton" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAEQAAgAAAAAAA=</HashCode>
+      <FileName>MemoryManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MemoryManager" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJQAAAgAAAAIAAAQAAgAAECAAAAAAEQAAAAAAAAAAA=</HashCode>
+      <FileName>MemoryManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectAllocatorInterface&lt;Allocator&gt;" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectAllocatorInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stack_Object_Allocator&lt;Allocator&gt;" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAEAAAAABAAAAAAAAAAAAAABAAAAAABAAAAAAA=</HashCode>
+      <FileName>ObjectAllocatorInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Small_Object_Allocator&lt;Allocator&gt;" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAEAIAAABgAAAAAAAAAAAAICAAAAAEBAAAAIAA=</HashCode>
+      <FileName>ObjectAllocatorInterfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingletonHolder&lt;T&gt;" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAEAABAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Singleton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RefCounted&lt;P&gt;" Collapsed="true">
+    <Position X="10.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAQAAAAAAAABAAAAAAAAABAAABA=</HashCode>
+      <FileName>SmartPointers.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartPtr&lt;T&gt;" Collapsed="true">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAABAAAAgAAAgAAAAAAAAAAAAAgABABAAA=</HashCode>
+      <FileName>SmartPointers.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StandardAllocator&lt;T&gt;" Collapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABEQAAIAAAAIAAAEAAAAIAAAAAAEAAAAAAAEI=</HashCode>
+      <FileName>StandardAllocator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Timer" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAICAAAAAgAABAAAAAAAAAAAAACAAAAAAEAAA=</HashCode>
+      <FileName>Timer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
