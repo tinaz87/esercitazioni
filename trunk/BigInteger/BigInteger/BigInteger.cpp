@@ -684,13 +684,13 @@ bigInt bigInt::doDivision(const bigInt& divisore,bigInt& o_remainder,const bool 
 
  bool bigInt::operator<=(const bigInt& r_value) const{
 
-	return ( *this < r_value) || !(*this > r_value);
+	return !(*this > r_value);
 
 }
 
  bool bigInt::operator>=(const bigInt& r_value) const{
 
-	return  (*this > r_value) || !(*this < r_value);
+	return  !(*this < r_value);
 
 }
 
