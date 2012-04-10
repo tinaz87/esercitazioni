@@ -53,16 +53,18 @@ namespace Test{
 		for(int i = 0 ; i<100; ++i){
 
 			int r = std::rand();
-			if(i%2 ==  0){
+			if(i%3 ==  0){
 				list_1.push_back(r);
 				list_2.push_back(r-1);
 			}
 			else{
 
-				list_1.push_front(r);
+				list_1.push_front(r-1);
 				list_2.push_front(r+1);
 			}
 		}
+		
+		
 		
 
 		std::cout<<"\nLista_1"<<std::endl;
@@ -146,6 +148,12 @@ namespace Test{
 			}
 		}
 
+		/*
+		bool val = ( lista < lista2);
+		bool val1 = ( lista2 < lista);
+
+		bool val11 = ( lista2 == lista2);
+		*/
 		std::cout<<"\nLista_1"<<std::endl;
 		print<SListArray<char> >(lista);
 		

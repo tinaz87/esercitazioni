@@ -847,10 +847,65 @@ namespace slst{
 	};
 
 	template<typename T,typename Allocator>
-	void swap(Slist<T,Allocator>& lhs,Slist<T,Allocator>& rhs){
+	void swap(Slist<T,Allocator>& l_val,Slist<T,Allocator>& r_val){
 
-		lhs.swap(rhs);
+		l_val.swap(r_val);
 
 	}
+
+	template<typename T,typename Allocator>
+	bool operator==(Slist<T,Allocator>& l_val,Slist<T,Allocator>& r_val){
+
+		if(l_val.size() != r_val.size())
+			return false;
+
+		Slist<T,Allocator>::iterator left_it = l_val.begin();
+		Slist<T,Allocator>::iterator right_it = r_val.begin();
+
+		while(left_it != l_val.end() && right_it != r_val.end())
+		{
+			if(*left_it!=*right_it)
+				return false;
+
+			++left_it;
+			++right_it;
+		}
+
+		return true;
+
+	}
+
+	template<typename T,typename Allocator>
+	bool operator!=(Slist<T,Allocator>& l_val,Slist<T,Allocator>& r_val){
+
+		return !(l_val==r_val)
+
+	}
+
+	template<typename T,typename Allocator>
+	bool operator<(Slist<T,Allocator>& l_val,Slist<T,Allocator>& r_val){
+
+		//Returns true if range [first1,last1) compares lexicographically less than the range [first2,last2).
+		return std::lexicographical_compare(l_val.begin(),l_val.end(),r_val.begin(),r_val.end());
+	}
+
+	template<typename T,typename Allocator>
+	bool operator>(Slist<T,Allocator>& l_val,Slist<T,Allocator>& r_val){
+
+		return !( l_val==r_val ) && !( l_val<r_val );
+	}
+
+	template<typename T,typename Allocator>
+	bool operator>=(Slist<T,Allocator>& l_val,Slist<T,Allocator>& r_val){
+
+		return !( l_val<r_val );
+	}
+
+	template<typename T,typename Allocator>
+	bool operator<=(Slist<T,Allocator>& l_val,Slist<T,Allocator>& r_val){
+
+		return !( l_val>r_val );
+	}
+
 
 }
