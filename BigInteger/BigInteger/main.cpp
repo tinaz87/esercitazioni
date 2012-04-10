@@ -9,7 +9,66 @@
 
 namespace Big{
 
-	// Il test utilizzato è preso da quello fatto da Devis
+
+	void ComparisonTest(){
+
+		std::cout<<" - - - - ComparisonTest - - - - - "<<std::endl;
+
+		bigInt a=2568874;
+		bigInt b=987556;
+
+		a*=a;
+		b*=b;
+
+		std::cout<<"a: "<<a<<std::endl;
+		std::cout<< " b: "<<b<<std::endl; 
+		std::cout<<" a < b : "<<(a<b)<<std::endl;
+
+		a*=a;
+		b*=b;
+
+		std::cout<<"a: "<< a<<std::endl;
+		std::cout<< " b: "<<b<<std::endl; 
+		std::cout<<" a <= b : "<<(a<=b)<<std::endl;
+
+		a*=a;
+		b*=b;
+
+		std::cout<<"a: "<< a<<std::endl;
+		std::cout<< " b: "<<b<<std::endl; 
+		std::cout<<" a > b : "<< (a>b) <<std::endl;
+
+		a*=a;
+		b*=b;
+
+		std::cout<<"a: "<< a<<std::endl;
+		std::cout<< " b: "<<b<<std::endl; 
+		std::cout<<" a >= b : "<< (a>=b) <<std::endl;
+
+		a=b;
+		std::cout<<"a: "<< a<<std::endl;
+		std::cout<< " b: "<<b<<std::endl; 
+		std::cout<<" a == b : "<< (a==b) <<std::endl;
+
+		std::cout<<"a: "<< a<<std::endl;
+		std::cout<< " b: "<<b<<std::endl; 
+		std::cout<<" a <= b : "<< (a<=b) <<std::endl;
+
+		std::cout<<"a: "<< a<<std::endl;
+		std::cout<< " b: "<<b<<std::endl; 
+		std::cout<<" a => b : "<< (a>=b) <<std::endl;
+
+		std::cout<<"a: "<<a<<std::endl;
+		std::cout<< " b: "<<b<<std::endl; 
+		std::cout<<" a < b : "<<(a<b)<<std::endl;
+
+		std::cout<<"a: "<< a<<std::endl;
+		std::cout<< " b: "<<b<<std::endl; 
+		std::cout<<" a > b : "<< (a>b) <<std::endl;
+
+	}
+
+	// Il seguente test utilizzato è preso da quello fatto da Devis
 
 	bigInt Fibonacci(UINT32 n)
 	{
@@ -251,58 +310,8 @@ namespace Big{
 int main(int argc, char** argv)
 {
 	
-	bigInt a=2568874;
-	bigInt b=987556;
-
-	a*=a;
-	b*=b;
-
-	std::cout<<"a: "<<a;
-	std::cout<< " b: "<<b; 
-	std::cout<<" a < b : "<<(a<b)<<std::endl;
-
-	a*=a;
-	b*=b;
-
-	std::cout<<"a: "<< a;
-	std::cout<< " b: "<<b; 
-	std::cout<<" a <= b : "<<(a<=b)<<std::endl;
-
-	a*=a;
-	b*=b;
-
-	std::cout<<"a: "<< a;
-	std::cout<< " b: "<<b; 
-	std::cout<<" a > b : "<< (a>b) <<std::endl;
-
-	a*=a;
-	b*=b;
-
-	std::cout<<"a: "<< a;
-	std::cout<< " b: "<<b; 
-	std::cout<<" a >= b : "<< (a>=b) <<std::endl;
-
-	a=b;
-	std::cout<<"a: "<< a;
-	std::cout<< " b: "<<b; 
-	std::cout<<" a == b : "<< (a==b) <<std::endl;
-
-	std::cout<<"a: "<< a;
-	std::cout<< " b: "<<b; 
-	std::cout<<" a <= b : "<< (a<=b) <<std::endl;
-
-	std::cout<<"a: "<< a;
-	std::cout<< " b: "<<b; 
-	std::cout<<" a => b : "<< (a>=b) <<std::endl;
-
-	std::cout<<"a: "<<a;
-	std::cout<< " b: "<<b; 
-	std::cout<<" a < b : "<<(a<b)<<std::endl;
-
-	std::cout<<"a: "<< a;
-	std::cout<< " b: "<<b; 
-	std::cout<<" a > b : "<< (a>b) <<std::endl;
-
+	
+	Big::ComparisonTest();
 
 	Big::ShiftTest();
 
