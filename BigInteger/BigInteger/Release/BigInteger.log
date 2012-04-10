@@ -1,5 +1,4 @@
-﻿  BigInteger.cpp
-  main.cpp
+﻿  main.cpp
   Generazione codice in corso...
 c:\users\probook\desktop\master\c++\esercitazionisvn\biginteger\biginteger\biginteger.cpp(1148): warning C4715: 'bigInt::MinHelper': non tutti i percorsi di controllo restituiscono un valore
   Generazione codice terminata
