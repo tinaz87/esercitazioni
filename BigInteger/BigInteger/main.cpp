@@ -251,6 +251,59 @@ namespace Big{
 int main(int argc, char** argv)
 {
 	
+	bigInt a=2568874;
+	bigInt b=987556;
+
+	a*=a;
+	b*=b;
+
+	std::cout<<"a: "<<a;
+	std::cout<< " b: "<<b; 
+	std::cout<<" a < b : "<<(a<b)<<std::endl;
+
+	a*=a;
+	b*=b;
+
+	std::cout<<"a: "<< a;
+	std::cout<< " b: "<<b; 
+	std::cout<<" a <= b : "<<(a<=b)<<std::endl;
+
+	a*=a;
+	b*=b;
+
+	std::cout<<"a: "<< a;
+	std::cout<< " b: "<<b; 
+	std::cout<<" a > b : "<< (a>b) <<std::endl;
+
+	a*=a;
+	b*=b;
+
+	std::cout<<"a: "<< a;
+	std::cout<< " b: "<<b; 
+	std::cout<<" a >= b : "<< (a>=b) <<std::endl;
+
+	a=b;
+	std::cout<<"a: "<< a;
+	std::cout<< " b: "<<b; 
+	std::cout<<" a == b : "<< (a==b) <<std::endl;
+
+	std::cout<<"a: "<< a;
+	std::cout<< " b: "<<b; 
+	std::cout<<" a <= b : "<< (a<=b) <<std::endl;
+
+	std::cout<<"a: "<< a;
+	std::cout<< " b: "<<b; 
+	std::cout<<" a => b : "<< (a>=b) <<std::endl;
+
+	std::cout<<"a: "<<a;
+	std::cout<< " b: "<<b; 
+	std::cout<<" a < b : "<<(a<b)<<std::endl;
+
+	std::cout<<"a: "<< a;
+	std::cout<< " b: "<<b; 
+	std::cout<<" a > b : "<< (a>b) <<std::endl;
+
+
 	Big::ShiftTest();
 
 	Big::FactorialTest();
